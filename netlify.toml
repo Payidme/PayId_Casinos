@@ -5,3 +5,6 @@
   from = "/go/:ref"
   to = "/.netlify/functions/redirect?ref=:ref"
   status = 200
+
+[build.environment]
+  GO_VERSION = "1.19"
