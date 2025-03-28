@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
   }
 
   // Google Sheets Webhook (REPLACE with your real endpoint)
-  const sheetWebhook = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+  const sheetWebhook = "https://script.google.com/macros/s/AKfycbwtjbRijK44xIEnQSU2eGoC5eq-_8HYDuENhYH48BO39RN75Zas77j84SMlkss3eKwu/exec";
 
   await fetch(sheetWebhook, {
     method: 'POST',
