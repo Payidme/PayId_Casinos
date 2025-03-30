@@ -4,11 +4,10 @@
 [[redirects]]
   from = "/go/:ref"
   to = "/.netlify/functions/redirect?ref=:ref"
-  status = 200
+  status = 302
 
 [build.environment]
   GO_VERSION = "1.19"
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
-
