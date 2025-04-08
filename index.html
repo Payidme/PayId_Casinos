@@ -1,73 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Casinos and Favicons</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-    }
-    .casino {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .casino img {
-      width: 32px;
-      height: 32px;
-      margin-right: 10px;
-      border: 1px solid #ccc;
-      padding: 2px;
-    }
-    .casino a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.1em;
-    }
-  </style>
-</head>
-<body>
-  <h1>Casinos</h1>
-  <div id="casinos-container">
-    <!-- Casinos will be loaded here -->
-  </div>
-  <script>
-    // Fetch the JSON file and display casinos with their favicons
-    fetch('output.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('casinos-container');
-        data.forEach(casino => {
-          // Create a container for each casino
-          const casinoDiv = document.createElement('div');
-          casinoDiv.className = 'casino';
-
-          // Create an image element for the favicon
-          const faviconImg = document.createElement('img');
-          faviconImg.src = casino.favicon;
-          faviconImg.alt = casino.title + " favicon";
-          // Create a link for the casino (fallback to URL if title is missing)
-          const titleLink = document.createElement('a');
-          titleLink.href = casino.url;
-          titleLink.textContent = casino.title || casino.url;
-          titleLink.target = '_blank';
-
-          // Append the favicon and the link to the container
-          casinoDiv.appendChild(faviconImg);
-          casinoDiv.appendChild(titleLink);
-          container.appendChild(casinoDiv);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading JSON:', error);
-        document.getElementById('casinos-container').innerText = 'Failed to load casino data.';
-      });
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayID Casinos</title>
+  </head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
