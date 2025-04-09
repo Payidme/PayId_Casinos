@@ -5,21 +5,21 @@ import { supabase } from './lib/supabase';
 export default function App() {
   const [casinos, setCasinos] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
   const fetchData = async () => {
-    const { data, error } = await supabase
-      .from('casinos').select('*');
-
-
+    const { data, error } = await supabase.from('casinos').select('*');
     if (error) {
       console.error('❌ Supabase fetch error:', error.message);
     } else {
-      console.log('✅ Casinos fetched:', data); // 👈 Add this
+      console.log('✅ Casinos fetched:', data); // 👈 See if this fires
+      alert(JSON.stringify(data, null, 2)); // 👈 Show data in browser
       setCasinos(data);
     }
   };
   fetchData();
 }, []);
+     }
+
 
   return (
     <div className="p-4 max-w-screen-xl mx-auto">
