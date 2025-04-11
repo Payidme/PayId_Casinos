@@ -1,1 +1,0 @@
-// Placeholder Netlify function to track clicks

@@ -1,0 +1,53 @@
+/* styles.css */
+/* Primary color scheme */
+:root {
+  --electric-blue: #007BFF;
+  --lime-green: #32CD32;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Headings using Montserrat */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: var(--card-shadow);
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 10px;
+}
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Call-To-Action Button styling */
+.btn-primary {
+  background-color: var(--electric-blue);
+  border-color: var(--electric-blue);
+}
+.btn-success {
+  background-color: var(--lime-green);
+  border-color: var(--lime-green);
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f9fa;
+}
+
+/* Email capture form */
+#email-form input[type="email"] {
+  max-width: 400px;
+  margin: 0 auto;
+}

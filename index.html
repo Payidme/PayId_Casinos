@@ -1,1 +1,102 @@
-<!DOCTYPE html><html><head><title>PayID Casinos</title></head><body><h1>Top PayID Casinos</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayID Casinos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Top Trusted PayID Casinos in Australia – Updated Daily. Real reviews, fast withdrawals, and exclusive bonus offers.">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-5" style="background-image:url('public/assets/hero.jpg'); background-size:cover;">
+    <div class="container">
+      <h1 class="display-4">PayID Casinos</h1>
+      <p class="lead">Top Trusted PayID Casinos in Australia – Updated Daily</p>
+      <p>Real reviews, fast withdrawals, and exclusive bonus offers.</p>
+      <a href="#email-capture" class="btn btn-success btn-lg">Get Bonus Alerts</a>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">PayID Casinos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="src/pages/casinos.html">Casinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/pages/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/pages/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <!-- Casino Filters -->
+    <section id="casino-filters">
+      <div class="d-flex justify-content-around mb-3">
+        <button class="btn btn-outline-primary">Best Bonuses</button>
+        <button class="btn btn-outline-primary">Fast Withdrawals</button>
+        <button class="btn btn-outline-primary">Newest</button>
+        <button class="btn btn-outline-primary">Game Types</button>
+      </div>
+    </section>
+
+    <!-- Casino Listing -->
+    <section id="casino-listings" class="row">
+      <!-- Dummy casino card template -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="public/assets/casino-logo.png" class="card-img-top" alt="Casino Logo">
+          <div class="card-body">
+            <h5 class="card-title">Casino Name</h5>
+            <p class="card-text">Rating: ★★★★☆</p>
+            <span class="badge bg-success">PayID Supported</span>
+            <p class="mt-2">Bonus: $138 No Deposit Bonus <span id="timer-1"></span></p>
+            <a href="#" class="btn btn-primary" onclick="trackReferral('casino-referral-url')">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- End template -->
+    </section>
+
+    <!-- Pagination -->
+    <section id="pagination" class="d-flex justify-content-center my-4">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">10</a></li>
+          <li class="page-item"><a class="page-link" href="#">20</a></li>
+          <li class="page-item"><a class="page-link" href="#">50</a></li>
+          <li class="page-item"><a class="page-link" href="#">100</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Email Capture -->
+    <section id="email-capture" class="text-center my-5">
+      <h2>Get Bonus Alerts</h2>
+      <form id="email-form" onsubmit="captureEmail(event)">
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-success">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-light text-center py-4">
+    <p>&copy; 2025 PayID Casinos. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/js/main.js"></script>
+  <script src="src/js/emailHandler.js"></script>
+  <script src="src/js/referralTracking.js"></script>
+</body>
+</html>
